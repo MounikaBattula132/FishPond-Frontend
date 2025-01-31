@@ -1,0 +1,15 @@
+<p>sensor-data-visualisation works!</p>
+<div id="buttons">
+  <button (click)="visualizeData('ph')">Visualize pH</button>
+  <button (click)="visualizeData('waterLevel')">Visualize Water Level</button>
+  <button (click)="visualizeData('oxygen')">Visualize Oxygen</button>
+  <button (click)="visualizeData('temperature')">Visualize Temperature</button>
+</div>
+
+<div *ngIf="chartOptions">
+  <highcharts-chart 
+    [Highcharts]="Highcharts" 
+    [options]="chartOptions" 
+    style="width: 100%; height: 400px; display: block;">
+  </highcharts-chart>
+</div>
